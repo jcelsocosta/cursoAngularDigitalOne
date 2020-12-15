@@ -30,7 +30,7 @@
                 <td><img [src]="coursesArray.imageUrl" width="40" height="40"></td>
                 <td>{{coursesArray.name}}</td>
                 <td>{{coursesArray.preco}}</td>
-                <td>{{coursesArray.code | lowercase | replace: '-':' '}}</td>
+                <td>{{coursesArray.code | lowercase  | replace: '-' : ' '}}</td>
                 <td>{{coursesArray.releaseDate | date: 'dd-MM-yyyy'}}</td>
                 <td>{{coursesArray.duration}}</td>
                 <td>

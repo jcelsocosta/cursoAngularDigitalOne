@@ -8,4 +8,8 @@
 -- Two way data biding [(xxx)] (ler e  escreve o valor de uma propriedade)
 <input [(ngModel)]="name" name="name">
 -->
-<app-course-list></app-course-list>
+<app-nav-bar></app-nav-bar>
+<div class="container mt-4">
+    <!-- router-otlet esse selector avisa ao angular que vai fazer o router aqui definido no array em app.module-->
+    <router-outlet></router-outlet>
+</div>
