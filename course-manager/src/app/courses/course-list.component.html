@@ -24,7 +24,12 @@
                 <td>{{coursesArray.code}}</td>
                 <td>{{coursesArray.releaseDate}}</td>
                 <td>{{coursesArray.duration}}</td>
-                <td>{{coursesArray.rating}}</td>
+                <td>
+                    <app-star [rating]="coursesArray.rating"></app-star>
+                </td>
+                <td>
+                    {{coursesArray.rating}}
+                </td>
             </tr>
         </tbody>
     </table>
