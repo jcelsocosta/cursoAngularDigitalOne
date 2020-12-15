@@ -17,7 +17,8 @@
 
         <tbody>
             <tr *ngFor="let coursesArray of courses">
-                <td>{{coursesArray.imageUrl}}</td>
+                <!-- [src] ele mescla o caminha string com a propriedade img-->
+                <td><img [src]="coursesArray.imageUrl" width="40" height="40"></td>
                 <td>{{coursesArray.name}}</td>
                 <td>{{coursesArray.preco}}</td>
                 <td>{{coursesArray.code}}</td>
