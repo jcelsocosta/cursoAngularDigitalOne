@@ -37,6 +37,7 @@
                     <app-star [rating]="coursesArray.rating"></app-star>
                 </td>
                 <td>
+                    <a [routerLink]="['/courses/info', coursesArray.id]" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
         </tbody>
