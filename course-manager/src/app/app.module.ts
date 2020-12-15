@@ -4,7 +4,7 @@ import {FormsModule} from '@angular/forms'
 import { CourseListComponent } from '../app/courses/course-list.component';
 import { StarComponent } from '../app/star/star.component';
 import { AppComponent } from './app.component';
-import { ReplacePipe } from 'src/pipe/replace.pipe';
+import { ReplacePipe } from 'src/app/pipe/replace.pipe';
 
 @NgModule({
   declarations: [
