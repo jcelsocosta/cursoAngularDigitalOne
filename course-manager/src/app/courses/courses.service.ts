@@ -13,6 +13,11 @@ export class CourseService{
         return COURSES;
     }
 
+    retrieveById(id:number): Course{
+
+        return COURSES.find((courseiterator: Course)=> courseiterator.id === id);
+    }
+
 }
 
 
