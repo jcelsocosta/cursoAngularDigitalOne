@@ -4,9 +4,7 @@ import {FormsModule} from '@angular/forms'
 import {RouterModule} from '@angular/router'
 import { HttpClientModule} from '@angular/common/http';
 
-import { StarComponent } from '../app/star/star.component';
 import { AppComponent } from './app.component';
-import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './404/error404.component';
 import { CourseModule } from './courses/course.module';
@@ -15,8 +13,6 @@ import { CourseModule } from './courses/course.module';
 @NgModule({
   declarations: [
     AppComponent,
-    StarComponent,
-    ReplacePipe,
     NavBarComponent,
     Error404Component,
   ],
