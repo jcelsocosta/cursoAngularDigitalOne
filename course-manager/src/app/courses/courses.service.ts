@@ -1,5 +1,8 @@
 import { Course } from './course';
 import { Injectable} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {Observable} from 'rxjs';
+
 
 // quando for  carregar o modulo raiz, ele vai carregar tambem essa classe de servico
 @Injectable({
@@ -9,6 +12,28 @@ import { Injectable} from '@angular/core';
 
 export class CourseService{
 
+    private courseUrl: string = 'http://localhost:3100/api/courses';
+
+    constructor(private httpClient: HttpClient){
+
+    }
+
+    retrieveAllAux(): Observable<Course[]>{
+        return this.httpClient.get<Course[]>(this.courseUrl);
+    }
+
+    retrieveByIdAux(id: number): Observable<Course>{
+        
+        return this.httpClient.get<Course>(`${this.courseUrl}/${id}`);
+    }
+
+    saveAux(course: Course): Observable<Course>{
+        if(course.id){
+            return this.httpClient.put<Course>(`${this.courseUrl}/${course.id}`,course);
+        }else{
+            return this.httpClient.post<Course>(`${this.courseUrl}`,course);
+        }
+    }
     retrieveAll(): Course[]{
         return COURSES;
     }
